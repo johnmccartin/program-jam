@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+
+<!--
+
+Hey Willy. So the first thing I did was download HTML5 Boilerplate (h5bp).
+It's basically a framework for building websites, the bare bones structure.
+It has a whole bunch of shit that helps building sites, esp more complicated ones.
+The main benefit is there's all sorts of things that you're SUPPOSED to do that I don't always understand but they've already done it so no worries.
+
+So up top they define the doctype.  This used to be really complex. But in HTML5 you just say it's html.
+Then they declare the html tag.  It looks way complex, because they use IE conditional comments to add classes to the html tag if it's an old IE version.
+This is helpful, because instead of having to use separate special IE stylesheets when they fuck things up,
+you can just target the issues in your main stylesheet with their special ie class.
+This is only relevant if you care about old IE users.
+Oh and the no-js class is so that you can have special styles for users without javascript, ie a blind person with a screen reader.
+The no-js class gets removed by modernizr (see below) for users with js enabled, or all of our users.
+
+
+-->
+
+
+    <head>
+         <!-- dont know what this stuff is don't care -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <title>Why Not Labs :: Program Jam</title>
+        <meta name="description" content="Mix and Match Architecture">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- call our stylesheets. normalize.css makes things work better across browsers. also i put h5bp's extra stuff in there. main.css is our stuff. -->
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+
+        <!-- modernizr is another thing that makes things better across browsers.
+        you can customize it so that it's less burdensome if you don't need all the firepower, which we don't. but oh well.  -->
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+
+    <body>
+         <!-- this tells users of old IE to stop and gives them an add-on option to make old IE better. you don't need admin privs to install it, so it's great for people at work. -->
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div class="container">
+
+            <h1 class="title">program jam</h1>
+
+            <p class="jammer"><span class="p1">...</span><span class="plus"> + </span><span class="p2">...</span></p>
+
+            <a class="btn">Jam It Again</a>
+
+            <p class="info">program jam radomly selects two architectural programs (ie which activity a given space is "meant" for) and jams them together. it's a game we play to imagine how two disparate uses can come together architecturally.</p>
+
+        </div>
+
+        <p class="credit">why not labs</p>
+
+         <!-- our main js calls. jQuery, plugins, and main. jQuery makes js easier to write, plugins is basically empty for this site, and main is where we work -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+    </body>
+</html>

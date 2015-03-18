@@ -1,0 +1,109 @@
+/*
+ok here are our styles. pretty simple.
+i put all of h5bp's code over in normalize, since i like to keep mine clean.
+*/
+
+
+/* define our main colors */
+body {
+  background-color: #008789;
+  color: #F1F0F4;
+}
+
+/* wrap everything in a container. make it smaller than the document and center it so that everything's not up on the side */
+.container {
+  width: 90%;
+  margin: 30px auto 0px auto;
+}
+
+/* make the title small */
+h1.title {
+  font-size: 1em;
+  font-weight: regular;
+}
+
+/* make the main part big */
+p.jammer {
+  font-size: 2em;
+  margin-top: 0px;
+}
+
+/* make the plus purple */
+span.plus {
+  color: #4F4C58;
+}
+
+/* style our button. these styles will change in the js to animate it */
+a.btn {
+  background: #F25A58;
+  border: 0px;
+  color: #F1F0F4;
+  padding: 10px;
+  border-bottom: 5px solid #4F4C58;
+  border-right: 5px solid #4F4C58;
+  position: relative;
+  cursor: pointer;
+}
+
+p.info {
+  font-size: .8em;
+  width: 50%;
+  min-width: 280px;
+  margin-top: 50px;
+}
+
+p.credit {
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  background-color: #4F4C58;
+  padding: 3px;
+}
+
+/* make highlighting stuff look nice */
+::-moz-selection {
+    background: #F25A58;
+    text-shadow: none;
+    color: #FFF;
+}
+
+::selection {
+    background: #F25A58;
+    text-shadow: none;
+    color: #FFF;
+}
+
+
+
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+    p.jammer {
+  font-size: 3.5em;
+}
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+
+
+
+
+
+
+
+
+
+
+
